@@ -1,3 +1,12 @@
+terraform {
+  backend "s3" {
+    bucket = "tfstate-pragmatic-terraform-20231126"
+    key    = "state/lambda/terraform.tfstate"
+    region = "ap-northeast-1"
+  }
+}
+
+
 data "aws_iam_policy_document" "assume_role" {
   statement {
     effect = "Allow"
