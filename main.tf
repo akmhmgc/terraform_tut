@@ -1,5 +1,6 @@
 terraform {
   backend "s3" {
+    # backendをS3に指定
     bucket = "tfstate-pragmatic-terraform-20231126"
     key    = "state/lambda/terraform.tfstate"
     region = "ap-northeast-1"
